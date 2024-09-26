@@ -2,7 +2,7 @@
 
 function Chai(){
     return(
-        <h2>Chai with create-react</h2>
+        <h2>Chai in create-react</h2>
     )
 }
 
