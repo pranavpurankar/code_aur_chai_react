@@ -1,31 +1,11 @@
 import { useState } from 'react'
-import InputBox from './components/InputBox';
-import useCurrencyInfo from './hooks/useCurrencyInfo'
 
 const BackgroundImage = 'https://images.unsplash.com/photo-1415356838286-df6fd593e8b3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 
 
 function App() {
-    const [amount, setAmount] = useState("0")
-    const [from, setFrom] = useState("usd")
-    const [to, setTo] = useState("inr")
-    const [convertedAmount, setConvertedAmount] = useState(0)
-
-    const CurrencyInfo = useCurrencyInfo(from)
-
-    const options = Object.keys(CurrencyInfo)
-
-    const swap = () => {
-      setFrom(to)
-      setTo(from)
-      setConvertedAmount(amount)
-      setAmount(convertedAmount)
-    }
-
-    const convert = () => {
-      setConvertedAmount(amount * CurrencyInfo[to])
-    }
-
+    
+    
   return (
       <div
           className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
